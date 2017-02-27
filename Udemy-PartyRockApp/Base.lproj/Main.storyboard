@@ -74,7 +74,7 @@
                                 <rect key="frame" x="0.0" y="244" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="uhD-8N-6Lm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="85" id="uhD-8N-6Lm" customClass="PartyRockTableViewCell" customModule="Udemy_PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uhD-8N-6Lm" id="CJN-B1-7Xw">
@@ -107,6 +107,10 @@
                                                 <constraint firstItem="Qfj-wA-BBN" firstAttribute="trailing" secondItem="CJN-B1-7Xw" secondAttribute="trailingMargin" constant="8" id="pPB-Rm-TD8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coverImage" destination="QHt-92-mrP" id="CEa-fV-suJ"/>
+                                            <outlet property="songNameLabel" destination="Qfj-wA-BBN" id="kpT-t6-cu1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -126,6 +130,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="partyRockTableView" destination="JIV-rp-0O4" id="Nk1-Y1-B3z"/>
                         <segue destination="NLd-53-ebp" kind="showDetail" identifier="VideoVC" id="4kW-5E-hGk"/>
                     </connections>
                 </viewController>
